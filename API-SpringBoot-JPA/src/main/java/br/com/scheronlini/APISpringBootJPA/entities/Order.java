@@ -1,5 +1,7 @@
 package br.com.scheronlini.APISpringBootJPA.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.Objects;
@@ -11,11 +13,18 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
     private Instant moment;
+
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
 
     public Order() {
+    }
+
+    public Order(Long id, Instant moment, User client) {
+        this.id = id;
+        this.moment = moment;
+        this.client = client;
     }
 
     public Long getId() {
