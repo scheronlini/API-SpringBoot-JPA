@@ -18,9 +18,8 @@ public class User {
     private String phone;
     private String password;
 
-
-
     @OneToMany(mappedBy = "client")
+    @JsonIgnore
     private List<Order> orders = new ArrayList<>();
 
     public User() {
