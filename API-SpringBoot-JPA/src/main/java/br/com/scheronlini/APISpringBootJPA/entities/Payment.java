@@ -1,5 +1,7 @@
 package br.com.scheronlini.APISpringBootJPA.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.Objects;
@@ -10,13 +12,13 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
     private Instant moment;
+    @JsonIgnore
     @OneToOne
     @MapsId
     private Order order;
 
     public Payment() {
     }
-
     public Payment(Long id, Instant moment, Order order) {
         this.id = id;
         this.moment = moment;

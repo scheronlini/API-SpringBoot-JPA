@@ -15,10 +15,8 @@ public class OrderItem  {
     private OrderItemPK id = new OrderItemPK();
     private Integer quantity;
     private Double price;
-
     public OrderItem() {
     }
-
     public OrderItem(Order order, Product product, Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
@@ -56,7 +54,9 @@ public class OrderItem  {
         this.price = price;
     }
 
-
+    public Double getSubtotal(){
+        return price * quantity;
+    }
 
     @Override
     public boolean equals(Object o) {
