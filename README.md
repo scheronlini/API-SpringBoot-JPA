@@ -37,4 +37,4 @@ A aplicação consiste em uma API Rest de Pedido de Compra, ela possui um cadast
 
 Scheronlini Mendes Fauser Martins
 
-https://www.linkedin.com/in/scheronlini-fauser-4057b2a0/
+https://www.linkedin.com/in/scheronlini
